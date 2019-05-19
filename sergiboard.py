@@ -9,31 +9,67 @@ from kivy.uix.button import Button
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
-        self.cols = 1
-        self.rows = 2
-
-        self.test = GridLayout()
-        self.test.cols = 1
-        self.add_widget(Label(text='Test'))
-
-        self.inside = GridLayout()
-        self.inside.cols = 2
-
-        self.cols = 2
-        self.inside.add_widget(Label(text="One"))
-        self.name = TextInput(multiline=False)
-        self.inside.add_widget(self.name)
-
-        self.add_widget(self.inside)
-
-        self.submit = Button(text="Submit", font_size=40)
-        self.add_widget(self.submit)
+        self.cols = 3
 
 
-class SimpleKivy(App):
+        self.btn_1 = Button(text="1", font_size=40, id='01')
+        self.btn_1.bind(on_press=self.pressed)
+        self.add_widget(self.btn_1)
+
+        self.btn_2 = Button(text="2", font_size=40, id='02')
+        self.btn_2.bind(on_press=self.pressed)
+        self.add_widget(self.btn_2)
+
+        self.btn_3 = Button(text="3", font_size=40, id='03')
+        self.btn_3.bind(on_press=self.pressed)
+        self.add_widget(self.btn_3)
+
+        self.btn_4 = Button(text="4", font_size=40, id='04')
+        self.btn_4.bind(on_press=self.pressed)
+        self.add_widget(self.btn_4)
+
+        self.btn_5 = Button(text="5", font_size=40, id='05')
+        self.btn_5.bind(on_press=self.pressed)
+        self.add_widget(self.btn_5)
+
+        self.btn_6 = Button(text="6", font_size=40, id='06')
+        self.btn_6.bind(on_press=self.pressed)
+        self.add_widget(self.btn_6)
+
+        self.btn_7 = Button(text="7", font_size=40, id='07')
+        self.btn_7.bind(on_press=self.pressed)
+        self.add_widget(self.btn_7)
+
+        self.btn_8 = Button(text="8", font_size=40, id='08')
+        self.btn_8.bind(on_press=self.pressed)
+        self.add_widget(self.btn_8)
+
+        self.btn_9 = Button(text="9", font_size=40, id='09')
+        self.btn_9.bind(on_press=self.pressed)
+        self.add_widget(self.btn_9)
+
+        self.btn_10 = Button(text="10", font_size=40, id='010')
+        self.btn_10.bind(on_press=self.pressed)
+        self.add_widget(self.btn_10)
+
+        self.btn_11 = Button(text="11", font_size=40, id='11')
+        self.btn_11.bind(on_press=self.pressed)
+        self.add_widget(self.btn_11)
+
+        self.btn_12 = Button(text="12", font_size=40, id='12')
+        self.btn_12.bind(on_press=self.pressed)
+        self.add_widget(self.btn_12)
+
+
+    def pressed(self, instance):
+        num = instance.id
+        print(num)
+
+
+class Sergiboard(App):
     def build(self):
         return MyGrid()
 
 
 if __name__ == "__main__":
-    SimpleKivy().run()
+    Sergiboard().run()
