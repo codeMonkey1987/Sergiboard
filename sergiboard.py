@@ -1,16 +1,33 @@
 import kivy
 from kivy.app import App
-from kivy.uix.gridlayout import GridLayout
+#from kivy.uix.gridlayout import GridLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+#from kivy.uix.screenmanager import ScreenManager, Screen
+#from kivy.lang import Builder
+
+#kv = Builder
 
 
+#class FirstWindow(Screen):
+    #pass
+
+
+#class SecondWindow(Screen):
+    #pass
+
+
+#class WindowMgr(ScreenManager):
+    #FirstWindow()
+
+
+"""
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
         self.cols = 3
-
 
         self.btn_1 = Button(text="1", font_size=40, id='01')
         self.btn_1.bind(on_press=self.pressed)
@@ -60,15 +77,18 @@ class MyGrid(GridLayout):
         self.btn_12.bind(on_press=self.pressed)
         self.add_widget(self.btn_12)
 
-
     def pressed(self, instance):
         num = instance.id
         print(num)
+"""
 
+#class Sergiboard(App):
+#    def build(self):
+#        return MyGrid()
 
 class Sergiboard(App):
     def build(self):
-        return MyGrid()
+        return FloatLayout()
 
 
 if __name__ == "__main__":
